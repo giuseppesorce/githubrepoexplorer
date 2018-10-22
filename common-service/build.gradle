@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.android.support:appcompat-v7:$android_support_version"
+    implementation "com.android.support:design:$android_support_version"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+// Reactive
+    compileOnly "io.reactivex.rxjava2:rxandroid:$rxandroid"
+    compileOnly "io.reactivex.rxjava2:rxjava:$rxjava"
+    compileOnly "io.reactivex.rxjava2:rxkotlin:$rxkotlin"
+
+    // Dagger 2
+    compileOnly "com.google.dagger:dagger:$dagger_version"
+
+    // Image Utilities
+    implementation "com.squareup.picasso:picasso:$picasso_version"
+}
+repositories {
+    mavenCentral()
+}

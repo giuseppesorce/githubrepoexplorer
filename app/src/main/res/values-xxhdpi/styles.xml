@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dim_namebold_size">18sp</dimen>
+    <dimen name="dim_nameowner_size">13sp</dimen>
+    <dimen name="dim_description_size">12sp</dimen>
+    <dimen name="dim_count_size">12sp</dimen>
+   <dimen name="dim_alertmessage">23sp</dimen>
+</resources>

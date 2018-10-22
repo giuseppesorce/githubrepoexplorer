@@ -1,0 +1,68 @@
+
+buildscript {
+    ext.kotlin_version = '1.2.71'
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+
+ext {
+    // andorid support library
+    android_support_version = "28.0.0"
+    //constraint layout version library
+    constraint_layout_version = "1.1.3"
+    //dagger version
+    dagger_version = "2.15"
+    //rx
+    rxandroid = "2.0.1"
+    rxjava = "2.1.3"
+    rxkotlin = "2.1.0"
+    //data
+    gson_version = "2.8.0"
+    // UI and UX
+    picasso_version = "2.71828"
+    rxbinding_version = "2.0.0"
+    rxbindings = "2.0.0"
+    // Testing
+    junit_version = "4.12"
+    mockito_version = "2.10.0"
+    //log
+    okhttp3_logging_interceptor_version = "3.4.2"
+    // retrofit 2
+    retrofit2_version = "2.3.0"
+    retrofit2_converter_gson_version = "2.3.0"
+    retrofit2_rxjava2_adapter_version = "1.0.0"
+    //logging
+    okhttp3_logging_interceptor_version = "3.4.2"
+    //goole room version
+    roomVersion = '1.1.0'
+
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

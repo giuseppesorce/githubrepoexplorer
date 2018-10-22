@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Watchers Explorer</string>
+    <string name="startMessage">Tap on search icon, insert a keyword to get repo list</string>
+    <string name="noConnection">No internet connection</string>
+    <string name="no_repo_found">Your search did not find repository</string>
+    <string name="min_chars">You must enter at least 3 characters</string>
+    <string name="server_error">Some error, try again</string>
+    <string name="error_data">There are some problems, unable to  do search</string>
+</resources>

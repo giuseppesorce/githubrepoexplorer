@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+
+    <color name="greyIcon">#757575</color>
+    <color name="textmenu">#dd121212</color>
+    <color name="navselected">#f8f6f6</color>
+    <color name="separator">#2d000000</color>
+    <color name="red">#ef5350</color>
+    <color name="green">#66bb6a</color>
+    <color name="greenaccent">#009688</color>
+    <color name="gold">#caae53</color>
+    <color name="almost_white">#fafafa</color>
+    <color name="almost_black">#121212</color>
+    <color name="almost_black_dd">#dd000000</color>
+    <color name="almost_black_alpha2">#dd121212</color>
+    <color name="almost_black_alpha">#1e000000</color>
+    <color name="almost_blacktrans">#89000000</color>
+    <color name="grey">#e0e0e0</color>
+    <color name="grey_blackalpha">#ABABAB</color>
+    <color name="black">#000000</color>
+    <color name="grey75">#757575</color>
+    <color name="grey1">#44121212</color>
+    <color name="grey2">#E8E8E8</color>
+    <color name="grey80">#8a000000</color>
+    <color name="whitealpha">#6dffffff</color>
+    <color name="tabindicator">#000000</color>
+    <color name="lineDivider">#BFBFBF</color>
+    <color name="bluegrey">#617d8b</color>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="dim_img_avatar">45dp</dimen>
+<dimen name="dim_img_fork">22dp</dimen>
+</resources>

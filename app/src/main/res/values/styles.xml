@@ -1,0 +1,65 @@
+<resources>
+    
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="ActionBar" parent="AppTheme">
+        <item name="android:titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+    </style>
+    
+    <style name="ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    
+    <style name="AppTheme.Toolbar" parent="AppTheme">
+        <!--This line changes the color of text in Toolbar-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!--This line changes the color of icons in toolbar (back, overflow menu icons)-->
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+    
+    <style name="SearchViewMy" parent="Widget.AppCompat.Light.SearchView">
+    
+    </style>
+    
+    <style name="nameBold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dim_namebold_size</item>
+    </style>
+    
+    <style name="nameOwner">
+        <item name="android:textColor">@color/almost_black</item>
+        <item name="android:textSize">@dimen/dim_nameowner_size</item>
+        <item name="android:textStyle">italic</item>
+    
+    </style>
+    
+    <style name="desciption">
+        <item name="android:textColor">@color/almost_black_alpha2</item>
+        <item name="android:textSize">@dimen/dim_description_size</item>
+       
+    </style>
+    
+    <style name="counter">
+        <item name="android:textColor">@color/almost_black</item>
+        <item name="android:textSize">@dimen/dim_count_size</item>
+        
+    </style>
+    
+    <style name="alertMessage">
+        <item name="android:textColor">@color/almost_black</item>
+        <item name="android:textSize">@dimen/dim_alertmessage</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="AppTheme.DarkAccent">
+        <item name="colorAccent">@color/colorPrimary</item> <!-- Whatever color you want-->
+    </style>
+</resources>
