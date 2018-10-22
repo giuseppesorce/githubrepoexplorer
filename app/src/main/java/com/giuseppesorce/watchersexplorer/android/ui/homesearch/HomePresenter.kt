@@ -23,6 +23,7 @@ class HomePresenter @Inject constructor(
 
     private var view: HomeView? = null
     private var compositeDisposable = CompositeDisposable()
+    private var languageFilter= "java"
 
     override fun detachView() {
         view = null
@@ -37,7 +38,7 @@ class HomePresenter @Inject constructor(
 
     private fun searchRepo(word: String) {
 
-        searchUseCases.execute(SearchParameters(word)).subscribe({ repo ->
+        searchUseCases.execute(SearchParameters(word +"+language:$languageFilter")).subscribe({ repo ->
 
             view?.updateRepoList(repo)
             view?.showHideProgress(false)

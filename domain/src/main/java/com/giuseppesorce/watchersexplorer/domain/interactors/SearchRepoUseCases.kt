@@ -19,7 +19,7 @@ class SearchRepoUseCases @Inject constructor(
     private val searchRepository: SearchRepository, workerThreadExecutor: WorkerThreadExecutor,
     mainThreadExecutor: MainThreadExecutor) : UseCaseSingle<List<Repo>, SearchParameters>(workerThreadExecutor, mainThreadExecutor) {
     override fun useCaseObservable(params: SearchParameters?): Single<List<Repo>> {
-        return searchRepository.searchRepo(params?.scopename +"+language:java" ).map { searchMapper.getRepo(it) }
+        return searchRepository.searchRepo(params?.scopename ).map { searchMapper.getRepo(it) }
     }
 }
 
