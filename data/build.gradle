@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
@@ -25,47 +26,48 @@ android {
 
 }
 dependencies
-{
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':common-service')
-    implementation "com.android.support:appcompat-v7:$android_support_version"
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    // Dagger 2
-    implementation 'com.google.dagger:dagger:2.15'
-    kapt 'com.google.dagger:dagger-compiler:2.15'
-    // Reactive
-    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
-    implementation "io.reactivex.rxjava2:rxjava:$rxjava"
-    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin"
-    // Gson
-    implementation "com.google.code.gson:gson:$gson_version"
+        {
+            implementation fileTree(dir: 'libs', include: ['*.jar'])
+            implementation project(':common-service')
+            implementation "com.android.support:appcompat-v7:$android_support_version"
+            testImplementation 'junit:junit:4.12'
+            androidTestImplementation 'com.android.support.test:runner:1.0.2'
+            androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+            // Dagger 2
+            implementation 'com.google.dagger:dagger:2.15'
+            kapt 'com.google.dagger:dagger-compiler:2.15'
+            // Reactive
+            implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+            implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+            implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin"
+            // Gson
+            implementation "com.google.code.gson:gson:$gson_version"
 
-    // OkHttp
-    implementation "com.squareup.okhttp3:okhttp:3.9.0"
+            // OkHttp
+            implementation "com.squareup.okhttp3:okhttp:3.9.0"
 
-    // Interceptors
-    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_logging_interceptor_version"
+            // Interceptors
+            implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_logging_interceptor_version"
 
-    implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
-    androidTestImplementation "android.arch.persistence.room:testing:$rootProject.roomVersion"
-    implementation "android.arch.persistence.room:rxjava2:$rootProject.roomVersion"
-    kapt "android.arch.persistence.room:compiler:$rootProject.roomVersion"
+            implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
+            androidTestImplementation "android.arch.persistence.room:testing:$rootProject.roomVersion"
+            implementation "android.arch.persistence.room:rxjava2:$rootProject.roomVersion"
+            kapt "android.arch.persistence.room:compiler:$rootProject.roomVersion"
 
-    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_converter_gson_version"
-    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$retrofit2_rxjava2_adapter_version"
-    //    //Room
-    implementation "android.arch.persistence.room:runtime:$roomVersion"
-    androidTestImplementation "android.arch.persistence.room:testing:$roomVersion"
-    implementation "android.arch.persistence.room:rxjava2:$roomVersion"
-    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
-    kapt "android.arch.persistence.room:compiler:$roomVersion"
-    kapt "android.arch.persistence.room:common:$roomVersion"
-    //annotation
-    implementation "com.android.support:support-annotations:$android_support_version"
-}
+            implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+            implementation "com.squareup.retrofit2:converter-gson:$retrofit2_converter_gson_version"
+            implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$retrofit2_rxjava2_adapter_version"
+            //    //Room
+            implementation "android.arch.persistence.room:runtime:$roomVersion"
+            androidTestImplementation "android.arch.persistence.room:testing:$roomVersion"
+            implementation "android.arch.persistence.room:rxjava2:$roomVersion"
+            annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+            kapt "android.arch.persistence.room:compiler:$roomVersion"
+            kapt "android.arch.persistence.room:common:$roomVersion"
+            //annotation
+            implementation "com.android.support:support-annotations:$android_support_version"
+            implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+        }
 
 repositories {
     mavenCentral()

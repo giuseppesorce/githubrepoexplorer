@@ -20,4 +20,8 @@ class SearchRepository @Inject constructor(private val searchApi: SearchApi) {
     fun searchSubscribers(owner :String, repo:String): Single<List<SubscriberResponse>> {
         return searchApi.searchSubscribers(owner, repo)
     }
+
+
+
+
 }
